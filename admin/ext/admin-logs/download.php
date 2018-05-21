@@ -3,7 +3,7 @@
 require_once '../../../config.php';
 
 // ensure that we can create ZIP files
-if (!class_exists('ZipArchive')) die("Your PHP distribution does not support ZipArchive.");
+if (!class_exists('ZipArchive')) trigger_error ("Your PHP distribution does not support ZipArchive.");
 
 if (isset($_SESSION['filterquery'])) $where = $_SESSION['filterquery'];
 else if (isset($_POST))       $where = "1";
