@@ -20,7 +20,7 @@ if ($warn_on) {
     $msg .= 'Your server has MySQL '.mysql_get_client_info().' installed, ';
     $msg .= 'but at least version 5 is required to handle this system. ';
     $msg .= $bypass_txt;
-    die($msg);
+    trigger_error ($msg);
   }
 }
 /* check PHP version -------------------------------------------------------- */
